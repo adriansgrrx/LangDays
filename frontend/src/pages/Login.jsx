@@ -2,10 +2,9 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router';
 import api from '../lib/axios';
 
-
 const Login = ({ setUser }) => {
   const [formData, setFormData] = useState({
-    email: "clydecatorce@gmail.com",
+    email: import.meta.env.VITE_EMAIL,
     password: "",
   });
 

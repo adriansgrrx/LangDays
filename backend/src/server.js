@@ -1,13 +1,13 @@
 import express from 'express';
-import userRouter from './src/routes/userRouter.js'
+import userRouter from './routes/userRouter.js'
 import dotenv from 'dotenv';
-import { connectDB } from './src/config/db.js';
+import { connectDB } from './config/db.js';
 import cors from 'cors';
 
 dotenv.config();
 
 const PORT = process.env.PORT || 5001
-const EMAIL = process.env.EMAIL
+const EMAIL = process.env.VITE_EMAIL
 
 const app = express();
 
