@@ -47,10 +47,19 @@ const Login = ({ setUser }) => {
         muted
       />
 
+      {/* Dark Overlay for better text readability */}
+      <div className="absolute top-0 left-0 w-full h-full bg-black/70"></div>
+
       {/* Content Container */}
-      <div className="relative z-10 flex flex-col items-start gap-10 px-4 mb-20">
+      <div className="relative z-10 flex flex-col items-center gap-10 px-4 mb-30">
         {/* Typing Animation - with explicit styling */}
-        <div className="max-w-xs md:max-w-md lg:max-w-md xl:max-w-md min-h-25 text-start text-white text-3xl md:text-4xl lg:text-4xl xl:text-4xl font-bold">
+        <img
+          src="/assets/langdays-logo-white.png"
+          alt="logo"
+          className="w-60 h-29 md:w-80 md:h-38 lg:w-80 lg:h-38  xl:w-80 xl:h-38 mt-10 mb-10"
+        />
+
+        <div className="max-w-xs md:max-w-md lg:max-w-md xl:max-w-md min-h-25 text-start items-start text-white text-3xl md:text-4xl lg:text-4xl xl:text-4xl font-medium">
           <TextType
             text={[
               "Happy 23rd Birthday Lang Lang💖!",
