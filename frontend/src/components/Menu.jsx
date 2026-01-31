@@ -33,7 +33,7 @@ const Menu = () => {
 
     return (
         <div className="fixed bottom-4 left-1/2 -translate-x-1/2 mb-3 z-50">
-            <ul className="menu menu-horizontal gap-2 backdrop-blur-md text-white rounded-box shadow-lg">
+            <ul className="menu menu-horizontal gap-2 backdrop-blur-md text-white bg-black/40 rounded-box shadow-lg">
                 <li>
                     <a
                         href="#hero"

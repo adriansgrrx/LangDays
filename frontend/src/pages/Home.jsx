@@ -6,9 +6,9 @@ import Memories from './Memories';
 
 const Home = ( {user, setUser, error} ) => {
   return (
-    <div className='min-h-screen bg-amber-50'>
+    <div className='min-h-screen bg-white overflow-hidden '>
 
-      <section id="hero">
+      <section id="hero" className='min-h-screen'>
         <Navbar />
         <Hero />
       </section>

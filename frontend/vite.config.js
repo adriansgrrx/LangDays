@@ -14,5 +14,8 @@ export default defineConfig({
         target: "http://localhost:5001"
       }
     }
-  }
+  },
+  optimizeDeps: {
+    include: ["@use-gesture/react"],
+  },
 })

@@ -1,13 +1,42 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import VideoBG from '../components/VideoBG'
+import DomeGallery from '../components/DomeGallery'
+import CircularGallery from '../components/CircularGallery';
+import CountUp from '../components/CountUp';
 
 const Memories = () => {
-    return (
-        <div className='min-h-screen flex justify-center items-center'>
-            Memories
-            Circular Gallery
-        </div>
-    )
-}
+    const [isMobile, setIsMobile] = useState(false);
 
-export default Memories
+    useEffect(() => {
+        const mq = window.matchMedia("(max-width: 768px)");
+        const update = () => setIsMobile(mq.matches);
+        update();
+        mq.addEventListener("change", update);
+        return () => mq.removeEventListener("change", update);
+    }, []);
+    return (
+        <div className="w-screen h-screen relative">
+            <div className="col text-black">
+                {/* <CountUp
+                    from={0}
+                    to={23}
+                    separator=","
+                    direction="up"
+                    duration={1}
+                    className="count-up-text"
+                    startCounting={false}
+                /> */}
+                <div style={{ height: '600px', position: 'relative' }}>
+                    <CircularGallery bend={3} textColor="#000000" borderRadius={0.05} scrollEase={0.02}
+                    bend={1}
+                    borderRadius={0.05}
+                    scrollSpeed={2}
+                    scrollEase={0.05}
+                    />
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default Memories;
