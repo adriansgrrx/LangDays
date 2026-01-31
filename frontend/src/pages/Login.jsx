@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router";
 import api from "../lib/axios";
 import TextType from "../components/TextType";
+import VideoBG from "../components/VideoBG";
 
 const Login = ({ setUser }) => {
   const [formData, setFormData] = useState({
@@ -39,13 +40,7 @@ const Login = ({ setUser }) => {
   return (
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Video */}
-      <video
-        className="absolute top-0 left-0 w-full h-full object-cover"
-        src="/video/video-bg.mp4"
-        autoPlay
-        loop
-        muted
-      />
+      <VideoBG />
 
       {/* Dark Overlay for better text readability */}
       <div className="absolute top-0 left-0 w-full h-full bg-black/70"></div>
