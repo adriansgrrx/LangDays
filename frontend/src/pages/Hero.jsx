@@ -5,7 +5,10 @@ const Hero = () => {
     return (
         <div className='min-h-screen flex justify-center items-center'>
             <VideoBG />
-
+            
+            <div className='z-10 text-white'>
+                Masonry
+            </div>
         </div>
     )
 }
