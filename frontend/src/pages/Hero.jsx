@@ -23,7 +23,7 @@ const Hero = () => {
     ];
     
     return (
-        <div className="min-h-screen flex items-center justify-center text-center mb-0">
+        <div className="min-h-screen flex items-center justify-center text-center">
             {/* Background */}
             <VideoBG />
             
@@ -33,7 +33,7 @@ const Hero = () => {
             {/* White gradient at bottom */}
             {/* <div className="absolute bottom-0 left-0 right-0 h-20 md:h-30 bg-circular-to-t from-white via-white/60 to-transparent z-5 pointer-events-none" /> */}
             
-            <div className="grid text-white z-10">
+            <div className="grid gap-3 text-white z-10 px-4">
                 {/* Main Greeting */}
                 <div id="hbd-text">
                     <SplitText
@@ -71,7 +71,7 @@ const Hero = () => {
                         className="text-5xl font-bold"
                         startCounting={false}
                     />
-                    <p className=" text-xs opacity-80">
+                    <p className="text-xs opacity-80">
                         years old
                     </p>
                 </div>
@@ -90,7 +90,7 @@ const Hero = () => {
                 </div>
                 
                 {/* Foreground Content */}
-                <div className="z-10 flex items-center justify-center">
+                <div className="z-10 flex items-center justify-center mt-8">
                     <BounceCards
                         className="custom-bounceCards"
                         images={images}
@@ -105,7 +105,7 @@ const Hero = () => {
                 </div>
                 
                 {/* Closing Line */}
-                <p className="max-w-sm md:max-w-md lg:max-w-lg xl:max-w-lg mx-auto mt-8 text-xs">
+                <p className="max-w-sm md:max-w-md lg:max-w-lg xl:max-w-lg mx-auto mt-8 text-xs opacity-75">
                     I am dedicating this website to be your official and personal birthday time capsule, starting this year. I hope you will like it!
                 </p>
             </div>

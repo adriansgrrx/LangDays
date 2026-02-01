@@ -2,7 +2,7 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <div className="navbar z-50 text-white">
+    <div className="navbar absolute top-0 left-0 right-0 z-50 text-white">
       <div className="navbar-start"></div>
       <div className="navbar-center mt-2">
         <a>

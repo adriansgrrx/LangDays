@@ -2,10 +2,11 @@ import { useEffect, useState } from "react";
 import Menu from "../components/Menu";
 import Navbar from "../components/Navbar";
 import Hero from "./Hero";
-import Letters from "./Letters";
+import Letters from "./Message";
 import Memories from "./Memories";
 import Loader from "../components/Loader";
 import { Loader2 } from "lucide-react";
+import MainBG from "../components/MainBG";
 
 const Home = ({ user, setUser, error }) => {
   const [loading, setLoading] = useState(true);
