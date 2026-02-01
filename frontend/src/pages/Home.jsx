@@ -1,19 +1,23 @@
-import { useEffect, useState } from 'react';
-import Menu from '../components/Menu';
-import Navbar from '../components/Navbar';
-import Hero from './Hero';
-import Letters from './Letters';
-import Memories from './Memories';
-import Loader from '../components/Loader';
+import { useEffect, useState } from "react";
+import Menu from "../components/Menu";
+import Navbar from "../components/Navbar";
+import Hero from "./Hero";
+import Letters from "./Letters";
+import Memories from "./Memories";
+import Loader from "../components/Loader";
+import { Loader2 } from "lucide-react";
 
-const Home = ( {user, setUser, error} ) => {
+const Home = ({ user, setUser, error }) => {
   const [loading, setLoading] = useState(true);
+  const [fadeIn, setFadeIn] = useState(false);
 
   useEffect(() => {
     // Simulate loading (video, images, animations)
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2000); // adjust timing as needed
+      // Trigger fade-in after loading completes
+      setTimeout(() => setFadeIn(true), 50);
+    }, 1000); // adjust timing as needed
 
     return () => clearTimeout(timer);
   }, []);
@@ -23,9 +27,12 @@ const Home = ( {user, setUser, error} ) => {
   }
 
   return (
-    <div className='min-h-screen bg-white overflow-hidden '>
-
-      <section id="hero" className='min-h-screen'>
+    <div
+      className={`min-h-screen bg-white overflow-hidden transition-opacity duration-700 ${
+        fadeIn ? "opacity-100" : "opacity-0"
+      }`}
+    >
+      <section id="hero" className="min-h-screen">
         <Navbar />
         <Hero />
       </section>
@@ -40,7 +47,7 @@ const Home = ( {user, setUser, error} ) => {
 
       <Menu />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

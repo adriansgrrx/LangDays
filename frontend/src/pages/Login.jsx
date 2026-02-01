@@ -51,18 +51,19 @@ const Login = ({ setUser }) => {
           className="w-60 h-29 md:w-80 md:h-38 lg:w-80 lg:h-38  xl:w-80 xl:h-38 mt-10 mb-10"
         />
 
-        <div className="max-w-xs md:max-w-md lg:max-w-md xl:max-w-md min-h-25 text-start items-start text-white text-3xl md:text-4xl lg:text-4xl xl:text-4xl font-medium">
+        <div className="max-w-xs md:max-w-md lg:max-w-md xl:max-w-md min-h-30 text-center text-white text-3xl md:text-4xl lg:text-4xl xl:text-4xl font-medium">
           <TextType
             text={[
-              "Happy 23rd Birthday Lang Lang💖!",
-              "I wish you all the best!",
-              "I love you so much!",
+              "A little corner of the internet made for Clyde Vlitz C. Catorce.",
+              "To celebrate her birthday.",
+              "To remember the day she was born.",
+              "To celebrate her every birthdays to come."
             ]}
-            typingSpeed={75}
-            pauseDuration={1500}
+            typingSpeed={90}
+            pauseDuration={2000}
             showCursor
             cursorCharacter="|"
-            deletingSpeed={50}
+            deletingSpeed={20}
             variableSpeedEnabled={false}
             variableSpeedMin={60}
             variableSpeedMax={120}

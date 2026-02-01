@@ -11,7 +11,7 @@ const VideoBG = () => {
                 muted
             />
             {/* Dark Overlay for better text readability */}
-            <div className="absolute top-0 left-0 w-full h-full bg-black/60"></div>
+            <div className="absolute top-0 left-0 w-full h-full bg-black/70"></div>
         </div>
     )
 }

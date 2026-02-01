@@ -1,18 +1,24 @@
-import React from "react";
+import React from 'react';
+import { LoaderIcon } from 'lucide-react';
+import VideoBG from './VideoBG';
 
 const Loader = () => {
-  return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black text-white">
-      <div className="text-center space-y-4">
-        <p className="text-sm uppercase tracking-widest opacity-70">
-          Preparing something special
-        </p>
-        <div className="text-4xl font-bold animate-pulse">
-          🎂
+    return (
+        <div className="fixed inset-0 z-50 flex items-center justify-center text-white">
+            <div>
+                <video
+                    className="absolute top-0 left-0 w-full h-full object-cover"
+                    src="/video/video-bg.mp4"
+                    autoPlay
+                    loop
+                    muted
+                />
+                {/* Dark Overlay for better text readability */}
+                <div className="absolute top-0 left-0 w-full h-full backdrop-blur-md bg-black/70"></div>
+            </div>
+            <span className="loading loading-dots loading-sm"></span>
         </div>
-      </div>
-    </div>
-  );
+    );
 };
 
 export default Loader;

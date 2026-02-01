@@ -9,7 +9,8 @@ const Navbar = () => {
           <img
             src="/assets/long-langdays-logo-white.png"
             alt="logo"
-            className="w-50 h-13 md:w-60 md:h-16 lg:w-60 lg:h-16 xl:w-60 xl:h-16 "
+            className="w-50 h-13"
+            // md:w-60 md:h-16 lg:w-60 lg:h-16 xl:w-60 xl:h-16 
           />
         </a>
       </div>
