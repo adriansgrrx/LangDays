@@ -5,7 +5,7 @@ const VideoBG = () => {
         <div>
             <video
                 className="absolute top-0 left-0 w-full h-full object-cover"
-                src="/video/video-bg.mp4"
+                src="https://langdays.z23.web.core.windows.net/assets/video-bg.mp4"
                 autoPlay
                 loop
                 muted

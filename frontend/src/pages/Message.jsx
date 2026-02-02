@@ -35,7 +35,7 @@ const Message = () => {
     }, []);
 
     return (
-        <div className="min-h-screen flex flex-col from-stone-50 via-neutral-50 to-stone-100">
+        <div className="min-h-screen flex flex-col from-stone-50 via-neutral-50 to-stone-100 bg-amber-50">
 
         {/* Header */}
         <div className="pt-8 sm:pt-12">

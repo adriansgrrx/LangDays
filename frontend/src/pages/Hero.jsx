@@ -7,11 +7,11 @@ import { Gift, Mail } from "lucide-react";
 
 const Hero = () => {
     const images = [
-        "assets/hero/picture-1.jpg",
-        "assets/hero/picture-2.jpg",
-        "assets/hero/picture-3.jpg",
-        "assets/hero/picture-4.jpg",
-        "assets/hero/picture-5.jpg",
+        "https://langdays.z23.web.core.windows.net/assets/hero/picture-1.jpg",
+        "https://langdays.z23.web.core.windows.net/assets/hero/picture-2.jpg",
+        "https://langdays.z23.web.core.windows.net/assets/hero/picture-3.jpg",
+        "https://langdays.z23.web.core.windows.net/assets/hero/picture-4.jpg",
+        "https://langdays.z23.web.core.windows.net/assets/hero/picture-5.jpg",
     ];
     
     const transformStyles = [
