@@ -7,11 +7,11 @@ import { Gift, Mail } from "lucide-react";
 
 const Hero = () => {
     const images = [
-        "https://picsum.photos/400/400?grayscale",
-        "https://picsum.photos/500/500?grayscale",
-        "https://picsum.photos/600/600?grayscale",
-        "https://picsum.photos/700/700?grayscale",
-        "https://picsum.photos/300/300?grayscale",
+        "assets/hero/picture-1.jpg",
+        "assets/hero/picture-2.jpg",
+        "assets/hero/picture-3.jpg",
+        "assets/hero/picture-4.jpg",
+        "assets/hero/picture-5.jpg",
     ];
     
     const transformStyles = [
