@@ -20,7 +20,7 @@ const Memories = () => {
             <div id="hbd-text" className="h-[25vh] flex items-center justify-center mt-20">
                 <div className='grid'>
                     <h1 className="text-2xl font-bold text-center">
-                        How We Celebrated
+                        Memories
                     </h1>
                     <h2 className="text-center">
                         Feb. 03, 2025

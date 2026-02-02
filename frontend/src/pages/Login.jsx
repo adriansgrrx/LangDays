@@ -6,15 +6,17 @@ import VideoBG from "../components/VideoBG";
 
 const Login = ({ setUser }) => {
   const [formData, setFormData] = useState({
-    email: import.meta.env.VITE_EMAIL,
+    email: "",
     password: "",
   });
-  console.log("Email:", import.meta.env.VITE_EMAIL);
 
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+
   const navigate = useNavigate();
 
   const handleChange = (e) => {
+    if (error) setError("");
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
@@ -91,7 +93,13 @@ const Login = ({ setUser }) => {
               className="btn btn-outline text-white join-item hover:bg-white hover:text-black transition-colors"
               disabled={loading}
             >
-              {loading ? "..." : "GO"}
+              {/* Error Message */}
+              {error && (
+                <p className="mt-2 text-sm text-red-400">
+                  {error}
+                </p>
+              )}
+              {loading ? <span className="loading loading-dots loading-xs"></span> : "GO"}
             </button>
           </form>
           <i className="label text-white text-xs text-center opacity-80">

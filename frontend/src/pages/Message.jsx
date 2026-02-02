@@ -38,15 +38,28 @@ const Message = () => {
         <div className="min-h-screen flex flex-col from-stone-50 via-neutral-50 to-stone-100 bg-amber-50">
 
         {/* Header */}
-        <div className="pt-8 sm:pt-12">
-            <div id="hbd-text" className="text-center">
-            <h1 className="text-2xl font-bold">Message</h1>
-            <h2>From Toti</h2>
+            <div id="hbd-text" className="pt-8 sm:pt-12">
+                <div className='grid'>
+                    <h1 className="text-2xl font-bold text-center">
+                        Message
+                    </h1>
+                    <h2 className="text-center">
+                        From Toti
+                    </h2>
+                    {/* Subheading */}
+                    <div className="grid gap-4 max-w-xs md:max-w-md lg:max-w-xl xl:max-w-xl mx-auto text-xs text-center opacity-90 mt-8">
+                        <p>
+                            For this year, Lang, all I want is for you to be happy. 
+                        </p>
+                        <p>
+                            And for the final part of this website, please open the envelope to see my personal wish and message for your special day. 
+                        </p>
+                    </div>
+                </div>
             </div>
-        </div>
 
         {/* Envelope — CENTERED */}
-        <div className="flex-1 flex items-center justify-center px-4">
+        <div className="flex-1 flex items-center justify-center px-4 mb-20">
             <div
             className="envelope-clickable w-full max-w-md mx-auto animate-fadeIn cursor-pointer"
             style={{ animationDelay: '0.2s' }}
@@ -66,7 +79,7 @@ const Message = () => {
                 />
             </div>
 
-            <p className="text-xs text-center text-neutral-400 mt-4 tracking-wide">
+            <p id="hbd-text" className="text-xs text-center text-neutral-400 mt-4 tracking-wide">
                 Click to open envelope
             </p>
             </div>
