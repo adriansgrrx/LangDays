@@ -23,16 +23,19 @@ const Login = ({ setUser }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
+    setError("");
     try {
       const res = await api.post("/users/login", formData);
       localStorage.setItem("token", res.data.token);
       setUser(res.data);
       navigate("/");
     } catch (error) {
-      if (error.response?.status === 429) {
-        console.log("Too many requests.", error);
+      if (error.response?.status === 401) {
+        setError("Wrong password");
+      } else if (error.response?.status === 429) {
+        setError("Too many attempts. Please try again later.");
       } else {
-        console.log("Failed to log in.", error);
+        setError("Login failed. Please try again.");
       }
     } finally {
       setLoading(false);
@@ -93,18 +96,20 @@ const Login = ({ setUser }) => {
               className="btn btn-outline text-white join-item hover:bg-white hover:text-black transition-colors"
               disabled={loading}
             >
-              {/* Error Message */}
-              {error && (
-                <p className="mt-2 text-sm text-red-400">
-                  {error}
-                </p>
-              )}
               {loading ? <span className="loading loading-dots loading-xs"></span> : "GO"}
             </button>
           </form>
-          <i className="label text-white text-xs text-center opacity-80">
-            Lang knows her password
-          </i>
+          {!error && (
+            <i className="label text-white text-xs text-center opacity-80">
+              Lang knows her password
+            </i>
+          )}
+          {/* Error Message */}
+          {error && (
+            <i className="label text-error text-xs text-center opacity-80">
+              {error}
+            </i>
+          )}
         </fieldset>
       </div>
     </div>
