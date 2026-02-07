@@ -28,16 +28,8 @@ WORKDIR /app
 COPY --from=build /app/backend ./backend
 COPY --from=build /app/frontend/dist ./frontend/dist
 
-# Set working directory to backend
-WORKDIR /app/backend
-
 # Expose port 5001
 EXPOSE 5001
 
-# Start the backend server
+# Start the backend server (from /app directory, not /app/backend)
 CMD ["npm", "start"]
-```
-
-## Step 2: Update Azure Application Settings
-
-## Step 3: Optional - Add .dockerignore
