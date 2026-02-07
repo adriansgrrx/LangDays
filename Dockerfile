@@ -33,5 +33,5 @@ ENV NODE_ENV=production
 # Expose port 5001
 EXPOSE 5001
 
-# Start directly with node (FASTER - skips npm overhead)
+# Start directly with node
 CMD ["node", "backend/src/server.js"]
