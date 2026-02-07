@@ -55,7 +55,7 @@ const Login = ({ setUser }) => {
         <div className="max-w-xs md:max-w-md lg:max-w-md xl:max-w-md min-h-30 text-center text-white text-3xl md:text-4xl lg:text-4xl xl:text-4xl font-medium">
           <TextType
             text={[
-              "A little corner of the internet made for Clyde",
+              "A little corner of the internet made for Clyde Vlitz.",
               "To celebrate her birthday.",
               "To remember the day she was born.",
               "To celebrate her every birthdays to come."
