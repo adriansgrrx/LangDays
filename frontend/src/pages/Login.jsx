@@ -3,6 +3,7 @@ import { useNavigate } from "react-router";
 import api from "../lib/axios";
 import TextType from "../components/TextType";
 import VideoBG from "../components/VideoBG";
+import ImageBG from "../components/ImageBG";
 
 const Login = ({ setUser }) => {
   const [formData, setFormData] = useState({
@@ -45,7 +46,7 @@ const Login = ({ setUser }) => {
   return (
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Video */}
-      <VideoBG />
+      <ImageBG />
 
       {/* Content Container */}
       <div className="relative z-10 flex flex-col items-center gap-10 px-4 mb-30">

@@ -4,6 +4,7 @@ import BounceCards from "../components/BounceCards";
 import SplitText from "../components/SplitText";
 import CountUp from "../components/CountUp";
 import { Gift, Mail } from "lucide-react";
+import ImageBG from "../components/ImageBG";
 
 const Hero = () => {
     const images = [
@@ -25,7 +26,7 @@ const Hero = () => {
     return (
         <div className="min-h-screen flex items-center justify-center text-center">
             {/* Background */}
-            <VideoBG />
+            <ImageBG />
             
             {/* Dark gradient at top */}
             {/* <div className="absolute top-0 left-0 right-0 h-32 md:h-40 bg-gradient-to-b from-black via-black/50 to-transparent z-[5] pointer-events-none" /> */}

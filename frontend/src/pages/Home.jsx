@@ -13,10 +13,8 @@ const Home = ({ user, setUser, error }) => {
   const [fadeIn, setFadeIn] = useState(false);
 
   useEffect(() => {
-    // Simulate loading (video, images, animations)
     const timer = setTimeout(() => {
       setLoading(false);
-      // Trigger fade-in after loading completes
       setTimeout(() => setFadeIn(true), 50);
     }, 2000); // adjust timing as needed
 
